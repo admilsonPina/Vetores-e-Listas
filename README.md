@@ -11,7 +11,7 @@ O programa foi desenvolvido em **Java** e utiliza uma estrutura de dados chamada
 
 ## Desenvolvimento
 
-## Classes
+### Classes
 
 O programa é composto pelas seguintes classes:
 
@@ -27,7 +27,7 @@ O programa é composto pelas seguintes classes:
 
 **Principal**: classe onde temos o método main, que realiza a execução do programa.
 
-#### Descrisao e funcionamento das classes 
+### Descrisao e funcionamento das classes 
 
 ...
 
