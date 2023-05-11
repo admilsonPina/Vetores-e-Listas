@@ -1,17 +1,17 @@
 # Vetores-e-Listas
 Usando vetores e listas em java
 
-## Relatório dos codigos desenvolvido
+# Relatório Implementacao
 
-### Introdução
+## Introdução
 
 O Programa é desenvolvido para gerenciar uma lista de alunos de uma disciplina. Ele permite adicionar, remover e buscar alunos, além de calcular a média da turma e encontrar o aluno com a maior nota.
 
 O programa foi desenvolvido em **Java** e utiliza uma estrutura de dados chamada **Lista Duplamente LIgada** para armazenar os alunos.
 
-### Desenvolvimento
+## Desenvolvimento
 
-#### Classes
+## Classes
 
 O programa é composto pelas seguintes classes:
 
@@ -27,10 +27,10 @@ O programa é composto pelas seguintes classes:
 
 **Principal**: classe onde temos o método main, que realiza a execução do programa.
 
-##### Descrisao e funcionamento das classes 
+#### Descrisao e funcionamento das classes 
 
 ...
 
-### Conclusão
+## Conclusão
 
 ...
