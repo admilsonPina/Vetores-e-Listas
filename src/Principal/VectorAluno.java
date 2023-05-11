@@ -1,6 +1,8 @@
 package Principal;
 
-import java.util.Arrays;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Scanner;
 
 public class VectorAluno {
 	private Aluno[] alunos;
@@ -21,6 +23,7 @@ public class VectorAluno {
             System.out.println("Vector cheio!");
         }
     }
+    
     public void listar() {
         for (int i = 0; i < posicao; i++) {
             System.out.println("Nome: " + alunos[i].getNome());
@@ -33,6 +36,7 @@ public class VectorAluno {
     }
     
     public void mostrarMediaNotas() {
+    	System.out.println("------------- Media de cada aluno ---------------");
         for (int i = 0; i < posicao; i++) {
             System.out.println("Nome: " + alunos[i].getNome());
             double media = alunos[i].getMedia();
@@ -42,7 +46,7 @@ public class VectorAluno {
     }
     
     public void ordenarNotas() {
-    	System.out.println("Notas ordenadas de menor para melhor");
+    	System.out.println("------Notas ordenadas de menor para melhor------");
         for (int i = 0; i < posicao; i++) {
             int[] notas = alunos[i].getNotas();
             for (int j = 0; j < notas.length - 1; j++) {
@@ -61,7 +65,17 @@ public class VectorAluno {
         listar();
     }
 
-    
+    public int tamanho() {
+        return alunos.length;
+    }
+    public Aluno get(int i) {
+        if (i>= 0 && i < tamanho) {
+            return alunos[i];
+        } else {
+            System.out.println ("Índice inválido: " + i);
+        }
+		return null;
+    }
     public Aluno pesquisar(String nome) {
         for (int i = 0; i < posicao; i++) {
             if (alunos[i].getNome().equals(nome)) {
@@ -70,4 +84,29 @@ public class VectorAluno {
         }
         return null;
     }
+    
+    public void lerAlunosDoArquivo(String nomeArquivo) {
+        try {
+            File fich = new File(nomeArquivo);
+            FileReader lerfich = new FileReader(fich);
+            Scanner ler = new Scanner(lerfich);
+            ler.nextLine(); //
+            
+            while (ler.hasNextLine()) {
+                String linha = ler.nextLine();
+                String[] v = linha.split(";");
+                String nome = v[0];
+                int[] notas = new int[6];
+                for (int i = 1; i < v.length; i++) {
+                    notas[i - 1] = Integer.parseInt(v[i]);
+                }
+                Aluno aluno = new Aluno(nome, notas);
+                inserir(aluno);
+            }
+            ler.close();
+        } catch (Exception e) {
+            e.printStackTrace(); // método util que achei para exibir informações sobre o erro.
+        }
+    }
+
 }
