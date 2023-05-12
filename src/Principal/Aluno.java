@@ -4,9 +4,9 @@ public class Aluno {
 	private String nome;
     private double [] notas;
 
-    public Aluno(String nome, double[] notas2) {
+    public Aluno(String nome, double[] notas) {
         this.nome = nome;
-        this.notas = notas2;
+        this.notas = notas;
     }
 
 

@@ -40,8 +40,8 @@ public class VectorAluno {
         for (int i = 0; i < posicao; i++) {
             System.out.println("Nome: " + alunos[i].getNome());
             double media = alunos[i].getMedia();
-            System.out.printf("Media:"+ media);
-            System.out.println("\n");
+            System.out.printf("Media: %.2f\n", media);
+            System.out.printf("\n");
         }
     }
     
