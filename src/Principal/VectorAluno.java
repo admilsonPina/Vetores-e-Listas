@@ -28,7 +28,7 @@ public class VectorAluno {
         for (int i = 0; i < posicao; i++) {
             System.out.println("Nome: " + alunos[i].getNome());
             System.out.print("Notas: ");
-            int[] notas = alunos[i].getNotas();
+            double[] notas = alunos[i].getNotas();
             for (int j = 0; j < notas.length; j++) {
                 System.out.print(notas[j] + " ");
             }   System.out.println("\n");
@@ -48,7 +48,7 @@ public class VectorAluno {
     public void ordenarNotas() {
     	System.out.println("------Notas ordenadas de menor para melhor------");
         for (int i = 0; i < posicao; i++) {
-            int[] notas = alunos[i].getNotas();
+            double [] notas = alunos[i].getNotas();
             for (int j = 0; j < notas.length - 1; j++) {
                 int indiceMenor = j;
                 for (int k = j + 1; k < notas.length; k++) {
@@ -56,7 +56,7 @@ public class VectorAluno {
                         indiceMenor = k;
                     }
                 }
-                int aux = notas[j];
+                double aux = notas[j];
                 notas[j] = notas[indiceMenor];
                 notas[indiceMenor] = aux;
                 
@@ -96,7 +96,7 @@ public class VectorAluno {
                 String linha = ler.nextLine();
                 String[] v = linha.split(";");
                 String nome = v[0];
-                int[] notas = new int[6];
+                double[] notas = new double[6];
                 for (int i = 1; i < v.length; i++) {
                     notas[i - 1] = Integer.parseInt(v[i]);
                 }

@@ -59,7 +59,8 @@ public class Disciplina {
             atual = atual.getProximo();
         }
         
-        System.out.println("Aluno com a melhor media na disciplina: " + melhorAluno.getNome() + " (media: " + melhorMedia + ")");
+        System.out.println("Aluno com a melhor media na disciplina e " + melhorAluno.getNome() );
+        System.out.printf("Media: %.2f\n", melhorMedia);
         return melhorAluno;
     }
 
